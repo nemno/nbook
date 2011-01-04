@@ -29,17 +29,17 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  color: #cc66cc;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #cc66cc;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #069;
+  color: #cc66cc;
 }
 
 /* Navigation */
@@ -67,11 +67,10 @@ nav ul li {
 
 nav ul li a {
   padding: 0 5px;
-  font-weight: bold;
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: #cc66cc;
 }
 
 nav ul li a:hover {
@@ -111,6 +110,7 @@ footer {
 footer nav {
   float: none;
 }
+
 /* User show page */
 
 table.profile {
@@ -127,7 +127,7 @@ td.sidebar {
   width: 30%;
   padding: 1em;
   vertical-align: top;
-  background: #ffc;
+  background: #99ccff;
 }
 
 .profile img.gravatar {
