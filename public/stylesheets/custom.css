@@ -135,6 +135,10 @@ td.sidebar {
   margin-bottom: -15px;
 }
 
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
 .field_with_errors {
   margin-top: 10px;
   padding: 2px;
@@ -181,4 +185,30 @@ ul.users {
 
 .users li {
   list-style: none;
+}
+
+.flash {
+    text-align: center;
+    padding:    .3em .4em;
+    clear:              both;
+	background: #99ccff;
+	border-color: #99ccff;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius:         10px;
+    max-width:  46.923em; /* 610/13 */  
+    *max-width: 45.750em; /* 610/13.3333 - for IE */
+}
+
+.flash.notice, .flash.info {
+    background: #99ccff;
+}
+
+.flash .close {
+    float:      right;
+}
+
+.flash .close a {
+    color:                              #99ccff;
+    text-decoration:    none;
 }
