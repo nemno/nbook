@@ -6,11 +6,12 @@ class UsersController < ApplicationController
       @title = "All users"
       #@users = User.paginate(:page => params[:page])
       @users = User.all
-    end
+  end
 
     def show
-      @user = User.find(params[:id])
-      @title = @user.name
+        @user = User.find(params[:id])
+        @microposts = @user.microposts.paginate(:page => params[:page])
+        @title = @user.name
     end
 
   def new
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
         @title = "Sign up"
         render 'new'
       end
-    end
+  end
     
     def edit
       @user = User.find(params[:id])
@@ -44,13 +45,13 @@ class UsersController < ApplicationController
           @title = "Edit user"
           render 'edit'
         end
-      end
+    end
       
       def destroy
           User.find(params[:id]).destroy
           flash[:success] = "User destroyed."
           redirect_to users_path
-        end
+      end
       
       private
       
@@ -60,7 +61,7 @@ class UsersController < ApplicationController
       
       def authenticate
             deny_access unless signed_in?
-          end
+      end
 
       def correct_user
         @user = User.find(params[:id])
@@ -69,5 +70,5 @@ class UsersController < ApplicationController
       
       def admin_user
             redirect_to(root_path) unless current_user.admin?
-          end
+      end
 end
